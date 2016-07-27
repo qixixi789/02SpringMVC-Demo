@@ -78,26 +78,6 @@ public class PageController {
             model.addAttribute("content", content);
             return "/WEB-INF/jsp/common/blank.jsp";
         } else {
-            // TODO: 16/7/26 这里是要做判断集合页面是否是二级目录或者二级域名还是特殊的二级目录
-            String str = request.getContextPath();
-            System.out.println("----------------");
-            System.out.println(str);
-            System.out.println("length: " + str.length());
-            if (str.length() == 0) {                    // 表明媒体为没有配置目录的二级目录或者二级域名
-                str = request.getRequestURI();
-                System.out.println(str);
-                str = str.substring(0, str.indexOf("list"));        // 分割字符串
-                System.out.println(str);
-                String[] s = str.split("/");
-                System.out.println(Arrays.toString(s));
-                if (s.length > 3) {                 // 表明媒体为没有配置目录的二级目录
-                    str = "/" + s[1];
-                } else {                            // 为正常的二级域名
-                    str = "";
-                }
-            }
-            System.out.println(str);
-            model.addAttribute("base", str);
             model.addAttribute("id", id);
             return "/WEB-INF/jsp/common/list.jsp";
         }

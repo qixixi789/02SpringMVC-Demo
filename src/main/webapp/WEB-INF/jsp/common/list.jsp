@@ -17,7 +17,7 @@
     <meta name="description" content="<%=project.getDescription()%>">
     <link href="http://jd.360cig.com/Public/Home/public/common.css" rel="stylesheet" type="text/css" />
     <link href="http://jd.360cig.com/Public/Home/public/commonstyle.css" rel="stylesheet" type="text/css" />
-    <base href="${base}/"/>
+    <base href="${pageContext.request.contextPath}/"/>
     <script type="text/javascript" src="<%=project.getAdjs()%>"></script>
 </head>
 <body>

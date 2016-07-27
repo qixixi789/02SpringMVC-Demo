@@ -11,7 +11,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>${content.title}<%=Common.getTitle(content.getId())%>${content.keyWords}</title>
+    <title>${content.title}${content.keyWords}</title>
     <meta name="keywords" content="${content.title}" />
     <meta name="desCrIPtion" content="${content.desc}" />
     <meta http-equiv="Cache-Control" content="no-transform" />
